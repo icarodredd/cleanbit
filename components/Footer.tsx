@@ -30,13 +30,21 @@ const Footer = () => {
   const [hovered, setHovered] = useState<string | null>(null);
 
   const socialLinks = [
-    { name: "Github", icon: <Github className="h-5 w-5" />, href: "#" },
-    { name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: "#" },
+    {
+      name: "Github",
+      icon: <Github className="h-5 w-5" />,
+      href: "https://github.com/icarodredd",
+    },
+    {
+      name: "LinkedIn",
+      icon: <Linkedin className="h-5 w-5" />,
+      href: "https://www.linkedin.com/in/icarodredd",
+    },
   ];
 
   const footerLinks = [
-    { name: "Services", href: "#" },
-    { name: "Privacy Policy", href: "#" },
+    { name: "Services", href: "/terms" },
+    { name: "Privacy Policy", href: "/privacy" },
   ];
 
   return (
@@ -47,7 +55,9 @@ const Footer = () => {
           <div className="space-y-4">
             <BackgroundGradient>
               <div className="px-4 py-2">
-                <h2 className="text-2xl font-bold">cleanbyte</h2>
+                <Link href={"/"} className="text-2xl font-bold">
+                  cleanbyte
+                </Link>
               </div>
             </BackgroundGradient>
             <p className="text-gray-400 max-w-xs">

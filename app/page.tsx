@@ -27,7 +27,7 @@ export default function Home() {
           src={checklist.src}
         />
       </div>
-      <MacScroll title="This is a Mac Scroll" />
+      <MacScroll title="Be virus free on your device." />
       <Footer />
     </>
   );
