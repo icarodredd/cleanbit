@@ -5,7 +5,7 @@ import type React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Github, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const BackgroundGradient = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -40,14 +40,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black text-white py-12 px-4 md:px-8">
+    <footer className="bg-black text-cleanlight py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and description */}
           <div className="space-y-4">
             <BackgroundGradient>
               <div className="px-4 py-2">
-                <h2 className="text-2xl font-bold">CleanBit</h2>
+                <h2 className="text-2xl font-bold">cleanbyte</h2>
               </div>
             </BackgroundGradient>
             <p className="text-gray-400 max-w-xs">
@@ -64,7 +64,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-gray-400 hover:text-cleanlight transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
-                  className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300"
+                  className="bg-gray-800 p-2 fill-cleanlight rounded-full hover:bg-gray-700 transition-colors duration-300"
                   onMouseEnter={() => setHovered(social.name)}
                   onMouseLeave={() => setHovered(null)}
                   whileHover={{ y: -5 }}
@@ -96,7 +96,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} CleanBit. All rights reserved.
+            © {new Date().getFullYear()} cleanbyte. All rights reserved.
           </p>
           <motion.p
             className="text-gray-400 text-sm mt-2 md:mt-0"
